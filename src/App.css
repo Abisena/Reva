@@ -190,13 +190,6 @@ section {
   border: 3px solid #333;
 }
 
-@media (max-width: 768px) {
-  .profile-image {
-    max-width: 120px;
-    height: 120px; /* Sesuaikan tinggi pada tampilan ponsel */
-  }
-}
-
 .profile-text {
   max-width: 600px;
   text-align: left;
@@ -231,6 +224,12 @@ section {
   color: #e4405f; /* Instagram Color */
 }
 
+@media (max-width: 768px) {
+  .profile-image {
+    max-width: 120px;
+    height: 120px;
+  }
+}
 /* CV Download Styles */
 .cv-download {
   margin-top: 20px;
