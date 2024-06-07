@@ -90,7 +90,10 @@ function App() {
           <div className="project">
             <img src={potoProject} alt="Project 1" className="project-image" />
             <h3>Project Pospay</h3>
-            <p>Description of Project 1.</p>
+            <p>
+              Financial dashboard to present information, process and analyze
+              data in the form of tables, charts and graphs
+            </p>
             <a
               href="https://lookerstudio.google.com/embed/reporting/fee30472-8d74-4e71-ad1a-70e1d78294c0/page/XNWpD"
               target="_blank"
