@@ -89,10 +89,10 @@ function App() {
         <div id="project-list" className="project-list">
           <div className="project">
             <img src={potoProject} alt="Project 1" className="project-image" />
-            <h3>Project 1</h3>
+            <h3>Project Pospay</h3>
             <p>Description of Project 1.</p>
             <a
-              href="https://example.com/project1"
+              href="https://lookerstudio.google.com/embed/reporting/fee30472-8d74-4e71-ad1a-70e1d78294c0/page/XNWpD"
               target="_blank"
               rel="noopener noreferrer"
               className="project-button"
