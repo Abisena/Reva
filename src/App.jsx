@@ -15,23 +15,28 @@ function App() {
   return (
     <>
       <nav>
-        <ul>
-          <li>
-            <a href="#home">Home</a>
-          </li>
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#projects">Projects</a>
-          </li>
-          {/* <li>
-            <a href="#certificates">Certificates</a>
-          </li> */}
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
+        <div className="container">
+          <input type="checkbox" id="toggle" hidden />
+          <label htmlFor="toggle" className="toggle-btn">
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </label>
+          <ul className="nav-menu" id="menu">
+            <li>
+              <a href="#home">Home</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
       </nav>
 
       <section id="home">
