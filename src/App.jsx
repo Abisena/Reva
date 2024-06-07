@@ -42,7 +42,7 @@ function App() {
       <section id="home">
         <div className="profile">
           <img
-            src="./public/images/revvv.jpg"
+            src="./src/components/images/revvv.jpg"
             alt="Reva"
             className="profile-image"
           />
@@ -97,7 +97,7 @@ function App() {
         <div id="project-list" className="project-list">
           <div className="project">
             <a href="#" className="project-link" onClick={openModal}>
-              <img src="./public/images/OIP.png" alt="Project 1" />
+              <img src="./src/components/images/OIP.png" alt="Project 1" />
             </a>
           </div>
         </div>
@@ -110,7 +110,7 @@ function App() {
               </span>
               <h2>Project 1</h2>
               <p>Description of Project 1.</p>
-              <img src="./public/images/OIP.png" alt="Project 1" />
+              <img src="./src/components/images/OIP.png" alt="Project 1" />
             </div>
           </div>
         )}
@@ -172,16 +172,16 @@ function App() {
         <h2>Certificates</h2>
         <div className="certificates">
           <img
-            src="./public/images/revvv.jpg"
+            src="./src/components/images/revvv.jpg"
             alt="Certificate 1"
             className="certificate-image"
-            // onClick={() => openModal("./public/images/revvv.jpg")}
+            // onClick={() => openModal("./src/components/images/revvv.jpg")}
           />
           <img
-            src="./public/images/revvv.jpg"
+            src="./src/components/images/revvv.jpg"
             alt="Certificate 2"
             className="certificate-image"
-            // onClick={() => openModal("./public/images/revvv.jpg")}
+            // onClick={() => openModal("./src/components/images/revvv.jpg")}
           />
         </div>
       </section> */}
