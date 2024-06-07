@@ -1,0 +1,276 @@
+/* Importing Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+
+/* Importing Font Awesome */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+
+/* Reset and General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+}
+
+/* Navbar Styles */
+nav {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav li a {
+  display: inline-block;
+  color: #000;
+  text-align: center;
+  padding: 20px 15px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  font-weight: 600;
+}
+
+nav li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #333;
+  transition: width 0.3s ease;
+}
+
+nav li a:hover::after {
+  width: 100%;
+}
+
+/* Section Styles */
+section {
+  height: 100vh;
+  padding: 100px 20px;
+  text-align: center;
+  transition: background-color 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* About Section Styles */
+#about {
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Profile Styles */
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.profile-image {
+  max-width: auto;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #333;
+}
+
+.profile-text {
+  max-width: 600px;
+  text-align: left;
+}
+
+.profile-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.profile-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.profile-text .social-icons {
+  margin-top: 20px;
+}
+
+.profile-text .social-icons a {
+  color: #000;
+  font-size: 1.5rem;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.profile-text .social-icons a:hover {
+  color: #0073b1; /* LinkedIn Color */
+}
+
+.profile-text .social-icons a:nth-child(2):hover {
+  color: #e4405f; /* Instagram Color */
+}
+
+/* CV Download Styles */
+.cv-download {
+  margin-top: 20px;
+}
+
+.cv-download a {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cv-download a:hover {
+  background-color: #555;
+}
+
+/* Certificates Styles */
+.certificates {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.certificate-image {
+  max-width: 200px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.certificate-image:hover {
+  transform: scale(1.05);
+}
+
+/* Alternating Section Background Colors */
+section:nth-child(odd) {
+  background-color: #ffffff;
+  color: #000;
+}
+
+section:nth-child(even) {
+  background-color: #f4f4f4;
+  color: #000;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .profile-image {
+    max-width: 120px;
+  }
+
+  .profile-text h2 {
+    font-size: 2rem;
+  }
+
+  .profile-text p {
+    font-size: 0.9rem;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+}
