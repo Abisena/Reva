@@ -1,21 +1,10 @@
 import "./App.css";
 import Contact from "./section/Contact";
-import { useState } from "react";
 import potoReva from "./components/images/revvv.jpg";
 import potoProject from "./components/images/OIP.png";
 import cv from "./components/file/CV ATS Reva Aulia Putri.pdf";
 
 function App() {
-  const [modalOpen, setModalOpen] = useState(false);
-
-  const openModal = () => {
-    setModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalOpen(false);
-  };
-
   return (
     <>
       <nav>
@@ -99,79 +88,46 @@ function App() {
         <p>Here are some of the projects Ive worked on:</p>
         <div id="project-list" className="project-list">
           <div className="project">
-            <a href="#" className="project-link" onClick={openModal}>
-              <img src={potoProject} alt="Project 1" />
+            <img src={potoProject} alt="Project 1" className="project-image" />
+            <h3>Project 1</h3>
+            <p>Description of Project 1.</p>
+            <a
+              href="https://example.com/project1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-button"
+            >
+              Visit Project
             </a>
           </div>
         </div>
 
-        {modalOpen && (
-          <div id="modal1" className="modal">
-            <div className="modal-content">
-              <span className="close" onClick={closeModal}>
-                &times;
-              </span>
-              <h2>Project 1</h2>
-              <p>Description of Project 1.</p>
-              <img src={potoProject} alt="Project 1" />
-            </div>
-          </div>
-        )}
-
-        {modalOpen && <div id="modal-overlay" onClick={closeModal}></div>}
-
         <style>{`
-          .modal {
-            display: ${modalOpen ? "block" : "none"};
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.5);
+          .project-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
           }
 
-          .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto;
+          .project {
+            border: 1px solid #ccc;
+            border-radius: 8px;
             padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 600px;
+            margin: 20px;
+            width: 300px;
+            box-sizing: border-box;
+            text-align: center;
+            background-color: #fff;
           }
 
-          .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-          }
-
-          .close:hover,
-          .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-          }
-
-          #modal-overlay {
-            display: ${modalOpen ? "block" : "none"};
-            position: fixed;
-            z-index: 2;
-            left: 0;
-            top: 0;
+          .project-image {
             width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            cursor: pointer;
+            border-radius: 8px;
           }
 
-          .cv-button {
+          .project-button {
             display: inline-block;
-            background-color: #333;
+            background-color: #007bff;
             color: #fff;
             padding: 10px 20px;
             text-decoration: none;
@@ -180,8 +136,8 @@ function App() {
             margin-top: 20px;
           }
 
-          .cv-button:hover {
-            background-color: #555;
+          .project-button:hover {
+            background-color: #0056b3;
           }
         `}</style>
       </section>
@@ -190,12 +146,6 @@ function App() {
       <footer>
         <p>&copy; 2024 Reva Aulia Putri</p>
       </footer>
-
-      <div id="myModal" className="modal">
-        <span className="close">&times;</span>
-        <img className="modal-content" id="modalImage" />
-        <div id="caption"></div>
-      </div>
     </>
   );
 }

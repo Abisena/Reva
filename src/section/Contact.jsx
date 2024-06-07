@@ -12,7 +12,7 @@ const Contact = () => {
       <div style={styles.contactBox}>
         <iframe
           title="Google Maps"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31721.837898152954!2d106.7834074!3d-6.5969171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c33b7e20271f%3A0x401576d14fed1b0!2sBogor%2C%20West%20Java%2C%20Indonesia!5e0!3m2!1sen!2sus!4v1623168166984!5m2!1sen!2sus"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7932.620652595253!2d106.7893971652146!3d-6.645297210936233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c23e18c3fb73%3A0x401576d14fed1b0!2sCaringin%2C%20Kec.%20Caringin%2C%20Kabupaten%20Bogor%2C%20Jawa%20Barat!5e0!3m2!1sen!2sid!4v1684969735067!5m2!1sen!2sid"
           width="100%"
           height="300"
           style={styles.map}
