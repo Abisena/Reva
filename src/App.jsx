@@ -1,7 +1,17 @@
 import "./App.css";
 import Contact from "./section/Contact";
+import { useState } from "react";
 
 function App() {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
   return (
     <>
       <nav>
@@ -79,16 +89,78 @@ function App() {
       <section id="projects">
         <h2>Projects</h2>
         <p>Here are some of the projects Ive worked on:</p>
-        <div className="project-list">
+        <div id="project-list" className="project-list">
           <div className="project">
-            <a
-              href="https://lookerstudio.google.com/embed/reporting/fee30472-8d74-4e71-ad1a-70e1d78294c0/page/XNWpD"
-              target="_blank"
-            >
+            <a href="#" className="project-link" onClick={openModal}>
               <img src="./public/images/OIP.png" alt="Project 1" />
             </a>
           </div>
         </div>
+
+        {modalOpen && (
+          <div id="modal1" className="modal">
+            <div className="modal-content">
+              <span className="close" onClick={closeModal}>
+                &times;
+              </span>
+              <h2>Project 1</h2>
+              <p>Description of Project 1.</p>
+              <img src="./public/images/OIP.png" alt="Project 1" />
+            </div>
+          </div>
+        )}
+
+        {modalOpen && <div id="modal-overlay" onClick={closeModal}></div>}
+
+        <style>{`
+          .modal {
+            display: ${modalOpen ? "block" : "none"};
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+          }
+
+          .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+          }
+
+          .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+          }
+
+          .close:hover,
+          .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+          }
+
+          #modal-overlay {
+            display: ${modalOpen ? "block" : "none"};
+            position: fixed;
+            z-index: 2;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+          }
+        `}</style>
       </section>
 
       {/* <section id="certificates">
