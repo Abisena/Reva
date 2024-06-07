@@ -1,12 +1,22 @@
-import "./App.css";
+import { useState } from "react";
+import "./App.css"; // Pastikan Anda mengimpor file CSS Anda
 import Contact from "./section/Contact";
 import potoReva from "./components/images/revvv.jpg";
 import potoProject from "./components/images/OIP.png";
 import cv from "./components/file/CV ATS Reva Aulia Putri.pdf";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
-    <>
+    <div className={`app ${darkMode ? "dark-mode" : ""}`}>
+      {/* Navbar */}
       <nav>
         <div className="container">
           <input type="checkbox" id="toggle" hidden />
@@ -28,10 +38,24 @@ function App() {
             <li>
               <a href="#contact">Contact</a>
             </li>
+            <li className="dark-mode-toggle">
+              <button onClick={toggleDarkMode}>
+                {darkMode ? (
+                  <span>
+                    <FontAwesomeIcon icon={faSun} /> Light Mode
+                  </span>
+                ) : (
+                  <span>
+                    <FontAwesomeIcon icon={faMoon} /> Dark Mode
+                  </span>
+                )}
+              </button>
+            </li>
           </ul>
         </div>
       </nav>
 
+      {/* Content */}
       <section id="home">
         <div className="profile">
           <img src={potoReva} alt="Reva" className="profile-image" />
@@ -72,6 +96,7 @@ function App() {
         </div>
       </section>
 
+      {/* About Section */}
       <section id="about">
         <h2>About</h2>
         <p>
@@ -83,6 +108,7 @@ function App() {
         </p>
       </section>
 
+      {/* Projects Section */}
       <section id="projects">
         <h2>Projects</h2>
         <p>Here are some of the projects Ive worked on:</p>
@@ -104,52 +130,16 @@ function App() {
             </a>
           </div>
         </div>
-
-        <style>{`
-          .project-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-          }
-
-          .project {
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 20px;
-            width: 300px;
-            box-sizing: border-box;
-            text-align: center;
-            background-color: #fff;
-          }
-
-          .project-image {
-            width: 100%;
-            border-radius: 8px;
-          }
-
-          .project-button {
-            display: inline-block;
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            margin-top: 20px;
-          }
-
-          .project-button:hover {
-            background-color: #0056b3;
-          }
-        `}</style>
       </section>
 
+      {/* Contact Section */}
       <Contact />
+
+      {/* Footer */}
       <footer>
         <p>&copy; 2024 Reva Aulia Putri</p>
       </footer>
-    </>
+    </div>
   );
 }
 
