@@ -3,6 +3,7 @@ import Contact from "./section/Contact";
 import { useState } from "react";
 import potoReva from "./components/images/revvv.jpg";
 import potoProject from "./components/images/OIP.png";
+import cv from "./components/file/CV ATS Reva Aulia Putri.pdf";
 
 function App() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -14,6 +15,7 @@ function App() {
   const closeModal = () => {
     setModalOpen(false);
   };
+
   return (
     <>
       <nav>
@@ -24,7 +26,7 @@ function App() {
             <span className="bar"></span>
             <span className="bar"></span>
           </label>
-          <ul className="nav-menu" id="menu">
+          <ul className="nav-menu">
             <li>
               <a href="#home">Home</a>
             </li>
@@ -47,7 +49,7 @@ function App() {
           <div className="profile-text">
             <h2>Reva Aulia Putri</h2>
             <p>
-              Hello! I am Reva Aulia Putri, a Finnance & Accounting staff.
+              Hello! I am Reva Aulia Putri, a Finance & Accounting staff.
               Welcome to my portfolio. Here you find information about my
               projects, skills, and contact details.
             </p>
@@ -55,25 +57,28 @@ function App() {
               <a
                 href="https://www.linkedin.com/in/reva-aulia-putri-4661a5228/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <i className="fab fa-linkedin"></i>
               </a>
               <a
                 href="https://www.instagram.com/revailyyy?igsh=MTM2eWx1b3B6b3I2bA=="
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <i className="fab fa-instagram"></i>
               </a>
             </div>
-            {/* <div className="cv-download">
+            <div className="cv-view">
               <a
-                href="./src/assets/file/CV-Muhamad Abisena Putrawan.pdf"
+                href={cv}
                 target="_blank"
-                download
+                rel="noopener noreferrer"
+                className="cv-button"
               >
-                <i className="fas fa-file-download"></i> Download CV
+                <i className="fas fa-file-alt"></i> Lihat CV
               </a>
-            </div> */}
+            </div>
           </div>
         </div>
       </section>
@@ -163,26 +168,23 @@ function App() {
             background-color: rgba(0, 0, 0, 0.5);
             cursor: pointer;
           }
+
+          .cv-button {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+          }
+
+          .cv-button:hover {
+            background-color: #555;
+          }
         `}</style>
       </section>
-
-      {/* <section id="certificates">
-        <h2>Certificates</h2>
-        <div className="certificates">
-          <img
-            src="./src/components/images/revvv.jpg"
-            alt="Certificate 1"
-            className="certificate-image"
-            // onClick={() => openModal("./src/components/images/revvv.jpg")}
-          />
-          <img
-            src="./src/components/images/revvv.jpg"
-            alt="Certificate 2"
-            className="certificate-image"
-            // onClick={() => openModal("./src/components/images/revvv.jpg")}
-          />
-        </div>
-      </section> */}
 
       <Contact />
       <footer>
