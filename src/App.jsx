@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css"; // Pastikan Anda mengimpor file CSS Anda
 import Contact from "./section/Contact";
 import potoReva from "./components/images/revvv.jpg";
-import potoProject from "./components/images/OIP.png";
+import potoProject from "./components/images/image.png";
 import cv from "./components/file/CV ATS Reva Aulia Putri.pdf";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
