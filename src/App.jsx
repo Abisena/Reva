@@ -1,6 +1,8 @@
 import "./App.css";
 import Contact from "./section/Contact";
 import { useState } from "react";
+import potoReva from "./components/images/revvv.jpg";
+import potoProject from "./components/images/OIP.png";
 
 function App() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -41,11 +43,7 @@ function App() {
 
       <section id="home">
         <div className="profile">
-          <img
-            src="./src/components/images/revvv.jpg"
-            alt="Reva"
-            className="profile-image"
-          />
+          <img src={potoReva} alt="Reva" className="profile-image" />
           <div className="profile-text">
             <h2>Reva Aulia Putri</h2>
             <p>
@@ -97,7 +95,7 @@ function App() {
         <div id="project-list" className="project-list">
           <div className="project">
             <a href="#" className="project-link" onClick={openModal}>
-              <img src="./src/components/images/OIP.png" alt="Project 1" />
+              <img src={potoProject} alt="Project 1" />
             </a>
           </div>
         </div>
@@ -110,7 +108,7 @@ function App() {
               </span>
               <h2>Project 1</h2>
               <p>Description of Project 1.</p>
-              <img src="./src/components/images/OIP.png" alt="Project 1" />
+              <img src={potoProject} alt="Project 1" />
             </div>
           </div>
         )}
