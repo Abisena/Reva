@@ -27,7 +27,7 @@ function App() {
       <section id="home">
         <div className="profile">
           <img
-            src="./src/assets/images/revvv.jpg"
+            src="./public/images/revvv.jpg"
             alt="Reva"
             className="profile-image"
           />
@@ -85,7 +85,7 @@ function App() {
               href="https://lookerstudio.google.com/embed/reporting/fee30472-8d74-4e71-ad1a-70e1d78294c0/page/XNWpD"
               target="_blank"
             >
-              <img src="./src/assets/images/OIP.png" alt="Project 1" />
+              <img src="./public/images/OIP.png" alt="Project 1" />
             </a>
           </div>
         </div>
@@ -95,16 +95,16 @@ function App() {
         <h2>Certificates</h2>
         <div className="certificates">
           <img
-            src="./src/assets/images/revvv.jpg"
+            src="./public/images/revvv.jpg"
             alt="Certificate 1"
             className="certificate-image"
-            // onClick={() => openModal("./src/assets/images/revvv.jpg")}
+            // onClick={() => openModal("./public/images/revvv.jpg")}
           />
           <img
-            src="./src/assets/images/revvv.jpg"
+            src="./public/images/revvv.jpg"
             alt="Certificate 2"
             className="certificate-image"
-            // onClick={() => openModal("./src/assets/images/revvv.jpg")}
+            // onClick={() => openModal("./public/images/revvv.jpg")}
           />
         </div>
       </section> */}
